@@ -46,5 +46,6 @@ En revanche, si l'agilité, les performances et l'expérience utilisateur sur mo
 Une approche hybride, utilisant SOAP pour les opérations critiques et REST pour les interactions client, pourrait offrir un bon équilibre.
 
 NB:Je m'appelle Abdoulaye Diop etudiant en master1 a l'UNCHK et developpeur fullStack a WEBGRAM.
+INE:N00B2F020181
 Pour la partie SOAP,je n'ai pas pu terminer cela est dû au fait que je suis seul dans ce projet, je n'ai pas de binôme.
 Pour ce qui est de l'API REST ,J'ai teste et cela marche a merveille .
