@@ -1,93 +1,50 @@
-# API_BANK_ABDOULAYE_DIOP
+**Partie 3 : Evaluation et Comparaison**
 
+1. Comparaison des deux services en termes de performance, de facilité d'implémentation et d'interfaçage.
 
+   a) Performance :
+    - REST : Généralement plus rapide et léger car il utilise des formats comme JSON, qui sont moins verbeux. Il peut tirer parti du cache HTTP pour améliorer les performances.
+    - SOAP : Peut être plus lent en raison de la surcharge XML et du traitement supplémentaire requis. Cependant, il peut être optimisé pour des performances élevées dans certains cas d'utilisation.
 
-## Getting started
+   b) Facilité d'implémentation :
+    - REST : Plus simple à implémenter et à comprendre, utilisant des standards web existants (HTTP, JSON). Il nécessite moins de code "boilerplate".
+    - SOAP : Plus complexe à mettre en œuvre, nécessitant une compréhension approfondie des spécifications SOAP et des outils spécialisés.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+   c) Interfaçage :
+    - REST : Flexible et facile à intégrer avec différents clients, y compris les applications mobiles et web. L'utilisation de JSON le rend particulièrement adapté aux applications JavaScript.
+    - SOAP : Offre une interface plus rigide et standardisée, ce qui peut être un avantage pour l'interopérabilité entre systèmes d'entreprise. Il dispose d'un contrat de service bien défini (WSDL).
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+2. Avantages et inconvénients de chaque approche dans le contexte d'une banque en ligne :
 
-## Add your files
+   REST :
+   Avantages :
+    - Performances élevées et faible latence, cruciales pour une expérience utilisateur fluide.
+    - Facilité d'intégration avec des applications mobiles et web modernes.
+    - Flexibilité pour évoluer et s'adapter aux nouveaux besoins des clients.
+    - Utilisation efficace de la bande passante, important pour les utilisateurs mobiles.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+   Inconvénients :
+    - Moins de standards formels pour la sécurité, ce qui peut nécessiter des mesures supplémentaires.
+    - Manque de spécifications formelles pour certaines fonctionnalités (comme la gestion des transactions).
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/laye-tech/api_bank_abdoulaye_diop.git
-git branch -M main
-git push -uf origin main
-```
+   SOAP :
+   Avantages :
+    - Protocoles de sécurité robustes intégrés, essentiels pour les transactions financières sensibles.
+    - Support natif pour les transactions distribuées, important pour maintenir l'intégrité des données bancaires.
+    - Contrat de service bien défini (WSDL), facilitant l'intégration avec les systèmes existants.
+    - Standards établis pour la gestion des erreurs et la fiabilité des messages.
 
-## Integrate with your tools
+   Inconvénients :
+    - Performances potentiellement inférieures, ce qui peut affecter l'expérience utilisateur sur les appareils mobiles.
+    - Complexité accrue de l'implémentation, pouvant ralentir le développement de nouvelles fonctionnalités.
+    - Moins adapté aux architectures légères et modernes privilégiées par certaines fintech concurrentes.
 
-- [ ] [Set up project integrations](https://gitlab.com/laye-tech/api_bank_abdoulaye_diop/-/settings/integrations)
+Dans le contexte d'une banque en ligne,
+le choix entre REST et SOAP dépendra des priorités spécifiques de l'institution.
+Si la banque met l'accent sur la sécurité, l'intégration avec des systèmes existants et la conformité réglementaire, SOAP pourrait être préféré.
+En revanche, si l'agilité, les performances et l'expérience utilisateur sur mobile sont primordiales, REST pourrait être plus approprié.
+Une approche hybride, utilisant SOAP pour les opérations critiques et REST pour les interactions client, pourrait offrir un bon équilibre.
 
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+NB:Je m'appelle Abdoulaye Diop etudiant en master1 a l'UNCHK et developpeur fullStack a WEBGRAM.
+Pour la partie SOAP,je n'ai pas pu terminer cela est dû au fait que je suis seul dans ce projet, je n'ai pas de binôme.
+Pour ce qui est de l'API REST ,J'ai teste et cela marche a merveille .
