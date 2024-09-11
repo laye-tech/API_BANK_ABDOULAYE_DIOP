@@ -1,0 +1,52 @@
+server:
+  port: 9990
+  servlet:
+    context-path: /bank-api-v1
+    error:
+      include-message: always
+      include-binding-errors: always
+      include-stacktrace:
+      include-exception: false
+
+spring:
+  datasource:
+    name: ${DB_NAME:bank-db}
+    host: ${DB_HOST:127.0.0.1}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+
+    url: jdbc:mysql://${spring.datasource.host}:3306/${spring.datasource.name}?createDatabaseIfNotExist=true
+
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#      ddl-auto: create # Changer en << update >> d?s qu'on initialise la db
+      ddl-auto: update # Changer en << update >> d?s qu'on initialise la db
+    show-sql: false
+  application:
+    name: api-banking-built-by-laye-tech
+
+#storage-document:
+# # file-storage-root-path: ${user.home}//Documents//upload//pdec
+#  file-storage-root-path: /home/webgram/pdec/docs
+#  template-name: template.vm
+#
+#webg-mail:
+#  enabled: false
+#  from: admin@admin.com
+#  base-url: http://localhost:4200
+#
+#pdec-cors:
+#  cors:
+#    allowed-origins: "http://localhost:4200,http://74.208.52.139"
+#    allowed-methods: "*"
+#    allowed-headers: "*"
+#    exposed-headers: "Authorization,Link"
+#    allow-credentials: true
+#    max-age: 1800
